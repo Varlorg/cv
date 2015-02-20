@@ -1,0 +1,153 @@
+%% Exemple de CV en LaTeX. 
+%% Créé par Adrian Poiget
+%% Basé sur celui d'Émilia Robin (Emilia.Robin@ens.fr)
+% %% Mai 2014
+
+\documentclass[a4paper,11pt]{article} % fonte 11 points, papier a4
+\usepackage[french]{babel} 
+\usepackage[utf8]{inputenc}     % accents dans le source
+\usepackage[T1]{fontenc}        % accents dans le DVI
+\usepackage{cv2} %cv 10pt, cv2 11pt
+%Définie une nouvelle couleur
+\definecolor{violet}{rgb}{0.5,0,0.5} % rgb entre 0 et 1
+\definecolor{bordeau}{HTML}{a92121} % code hexa de la couleur
+%\definecolor{orange}{RGB}{255,127,0} %  rgb entre 0 et 255
+\definecolor{bleu}{HTML}{197DB3}
+\definecolor{bleu}{HTML}{3686b0}
+\definecolor{bleu}{HTML}{0071ab}
+\definecolor{bleu_fonce}{HTML}{015478}
+%\definecolor{vert}{HTML}{59B34C}
+\definecolor{vert}{HTML}{218F13}
+\definecolor{vert}{HTML}{00AE00}
+\definecolor{vert}{HTML}{006E00}
+%\definecolor{vert}{HTML}{008100}
+%\definecolor{vert}{HTML}{399F2C}
+%\definecolor{vert}{HTML}{4CC33C}
+%\definecolor{vert}{HTML}{31CF1C}
+\definecolor{rouge}{HTML}{F33333}
+\definecolor{orange}{HTML}{FF7F00}
+\definecolor{gris}{HTML}{303030}
+\definecolor{gris_clair}{HTML}{444444}%{737373}
+
+%#######################################################
+%################ Informations à remplir ################
+%#######################################################
+
+\nom{Tux}{Latex}
+\dateNaissance{01}{01}{1970}
+\titre{My job}
+\adresse{666, street GNU - Beastie, Unixland}
+\telephone{+XXX XX XX XX XX}
+\email{my-email@adress.org}
+\site{my website}
+\github{my hithub}
+\permisB{y} %y pour afficher que vous avez le permis B
+%\couleur{vert}  % couleur disponible black white red green blue cyan magenta yellow
+%\couleur{bordeau}
+%\couleur{bleu}
+%\couleur{bleu_fonce} 
+\couleur{vert}
+\separationTabCouleur{}{}
+\nomCouleur{y}{}
+\titreCouleur{y}{gris}
+\infoCouleur{y}{gris_clair}
+\puceCouleur{}{}
+
+\calculAge
+
+% #########################################################
+% ################### Début du document ###################
+% #########################################################
+\begin{document}
+% ###################
+\Intro
+\vspace*{-0.7cm}
+%################### FORMATION  ###################
+\partie{Formation}
+\begin{tabular}{p{\largeur}!{\VRule}@{ - }R}
+\formation{begin}{end}
+{my diploma}{\href{www.websiteschool.com}{my school}, city}
+{Speciality}{}
+{}
+
+\formation{begin2}{end2}
+{school}{}
+{\textit{location} }{}{}
+
+\formation{year}{}
+{Baccalauréat section S}{}
+{\textit {location}}{}{}
+\end{tabular}
+
+%################### Expériences Professionnelles ###################
+\partie{Expériences Professionnelles}
+\begin{tabular}{p{\largeur}!{\VRule}@{ - }R}
+
+\experienceB{from - to}{}
+{\href{http://www.society.com/}{Society},  Location}
+{Title Job}
+{Title explanation}
+{\begin{itemize}
+  \item this
+  \item that 
+        \begin{itemize}
+          \item one
+          \item two
+          \item three
+      \end{itemize}
+\finEnum}
+
+\experienceB{From-to year}{}
+{Society2}
+{...}
+{sentence}
+{\newline \begin{tabular}{*{3}{@{ \ding{228} }p{3.5cm}}}
+ foo &  foo	& foo
+\end{tabular}}
+
+\experienceB{jan}{sept 1991}
+{Laboratory}
+{Intership}
+{Other xp}
+{\begin{itemize}
+  \item 
+  \item 
+\finEnum }
+
+\experience{ summer }{}
+{little exp }
+{}{}{}
+\end{tabular}
+
+\renewcommand{\arraystretch}{1.2}
+%################### Compétences techniques ###################
+\partie{Compétences techniques}
+\begin{tabular}{p{\largeur}!{\VRule}@{ - }p{4cm}p{3cm}!{\VRule}@{ - }l}
+\competence{Réseaux}{TCP/IP, LAN}  {Prog: }{C, Java}
+\competence{OS}{GNU/Linux}         { - \mbox{script}}{bash, python, perl}
+\competence{Outils}{SVN, Git, Vim }{ - \mbox{Framework}}{opencv}
+\competence{Autres}{\LaTeX}        { - \mbox{web dev}}{html, css, php}
+
+
+
+\end{tabular}
+
+%################### LANGUES  ###################
+\partie{Langues}
+\begin{tabularx}{\linewidth}{p{\largeur}!{\VRule}@{ - }p{4cm}D}
+\langue{Anglais}{Courant}{(score au toeic : XXX/990) }
+\langue{Espagnol}{mon niveau}{}
+\langue{Allemand}{A2}{}
+\end{tabularx}
+
+%################### Informations complémentaires ###################
+\partie{Informations complémentaires}
+\begin{itemize}
+\setlength{\itemindent}{-.45cm} % pour ne pas avoir l'espace à gauche
+\vspace*{-0.1cm}
+
+\complement{Sport}{..}
+\complement{Voyage}{là, là-bas }
+\complement{}{participation à ....}
+\end{itemize}
+\end{document}
