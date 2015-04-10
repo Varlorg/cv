@@ -1,3 +1,3 @@
 # cv
 
-Extension personelle de latex pour faire un cv
+Extension personnelle de latex pour faire un cv
