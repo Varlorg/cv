@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auteur : Adrian Poiget    %
+% Créé le : 05/06/2014      %
+% Mise à jour : 05/06/2014  %
+% Version 1.0               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inspiré par celui de Nicolas Gressier Créé le : 27/06/2007  Version 1.0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,sans,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[utf8x]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{marvosym}
+\usepackage{lipsum}
+%\renewcommand{\baselinestretch}{1.2}
+
+%\renewcommand{\sfdefault}{pgg}
+%\renewcommand{\sfdefault}{ptm} %Times font
+%\renewcommand{\sfdefault}{phv} %Helvetica font
+%\renewcommand{\sfdefault}{bch} %Charter font
+\renewcommand{\ttdefault}{pcr}
+
+\pagestyle{empty}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\addtolength{\parskip}{10pt}
+\def\interligne{1}% interligne
+
+\def\lieu{Ville}
+\def\signature{signature}
+\def\expediteur{Nom expéditeur}
+\def\adresseExpediteur{Adresse expéditeur }
+\def\mail{Mail}
+\def\mobile{num de téléphone}
+\def\fixe{num tel fixe}
+\def\destinataire{Destinataire }
+\def\societe{societe}
+\def\adresseDestinataire{ Adresse destinataire}
+\def\objet{Définir objet }
+\def\formuleAppel{Formule d'appel}
+
+\begin{document}
+%\sffamily
+%\hfill
+%
+\begin{minipage}[t]{.6\textwidth}
+    %\raggedleft
+    \raggedright
+    {\bfseries \expediteur}\\[.35ex]
+    \small\itshape
+    \adresseExpediteur\\
+    %\Telefon~\fixe\\
+    \Mobilefone~\mobile\\
+    \Letter~\mail
+\end{minipage}\\[1em]
+\hfill
+\begin{minipage}[t]{1\textwidth}
+    %\raggedright
+    \raggedleft
+    {\bfseries \destinataire}\\[.35ex]
+    \small\itshape
+    \adresseDestinataire\\
+\end{minipage}\\[2em]
+%
+\begin{flushleft}
+\textbf{Objet : }{\normalsize \objet }
+\end{flushleft}
+%
+\hfill
+%
+\begin{minipage}[t]{1\textwidth}
+    \raggedleft
+    \lieu, le \today
+\end{minipage}\\[3em]
+%
+\formuleAppel,\\[0.2em]
+{\setlength{\baselineskip}{\interligne\baselineskip} % augmenter l'interligne
+% fini par : \par} %%% <= terminer le paragraphe
+    \lipsum[1-3]
+\par} %%% <= terminer le paragraphe
+\vspace*{0.4cm}
+\raggedleft 
+\signature
+\end{document}
